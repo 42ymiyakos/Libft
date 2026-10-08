@@ -6,13 +6,13 @@
 /*   By: ymiyakos <ymiyakos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 15:54:49 by ymiyakos          #+#    #+#             */
-/*   Updated: 2026/10/08 16:09:17 by ymiyakos         ###   ########.fr       */
+/*   Updated: 2026/10/08 19:20:10 by ymiyakos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-size_t	strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
 	size_t	len;
 
