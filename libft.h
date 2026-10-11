@@ -6,7 +6,7 @@
 /*   By: ymiyakos <ymiyakos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 14:55:00 by ymiyakos          #+#    #+#             */
-/*   Updated: 2026/10/11 11:17:26 by ymiyakos         ###   ########.fr       */
+/*   Updated: 2026/10/11 11:54:50 by ymiyakos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,6 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_atoi(const char *nptr);
 void	*ft_calloc(size_t nmemb, size_t size);
-char 	*ft_strdup(const char *s);
+char	*ft_strdup(const char *s);
 
 #endif

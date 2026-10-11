@@ -6,13 +6,13 @@
 /*   By: ymiyakos <ymiyakos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/11 09:49:33 by ymiyakos          #+#    #+#             */
-/*   Updated: 2026/10/11 11:35:18 by ymiyakos         ###   ########.fr       */
+/*   Updated: 2026/10/11 13:27:40 by ymiyakos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdint.h>
 #include <stdlib.h>
-#include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {

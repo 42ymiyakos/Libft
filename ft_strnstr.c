@@ -6,7 +6,7 @@
 /*   By: ymiyakos <ymiyakos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/10 19:41:30 by ymiyakos          #+#    #+#             */
-/*   Updated: 2026/10/11 11:33:27 by ymiyakos         ###   ########.fr       */
+/*   Updated: 2026/10/11 13:32:21 by ymiyakos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		while (big[j] == little[j])
 			++j;
 		if (llen == j)
-			return (big[i]);
+			return ((char *)(big + i));
 		++i;
 	}
 	return (NULL);
