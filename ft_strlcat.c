@@ -6,7 +6,7 @@
 /*   By: ymiyakos <ymiyakos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/10 14:29:26 by ymiyakos          #+#    #+#             */
-/*   Updated: 2026/10/11 11:34:05 by ymiyakos         ###   ########.fr       */
+/*   Updated: 2026/10/11 16:27:58 by ymiyakos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		dst[dlen + i] = '\0';
 	return (dlen + slen);
 }
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	char	*src = "sunsun";
-// 	char	dst[12] = "puppet";
-// 	size_t	size = 3;
-
-// 	printf("%zu", ft_strlcat(dst, src, size));
-// 	printf("%s", dst);
-// 	return (0);
-// }

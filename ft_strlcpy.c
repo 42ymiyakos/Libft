@@ -6,7 +6,7 @@
 /*   By: ymiyakos <ymiyakos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/10 12:42:14 by ymiyakos          #+#    #+#             */
-/*   Updated: 2026/10/11 11:34:01 by ymiyakos         ###   ########.fr       */
+/*   Updated: 2026/10/11 16:36:05 by ymiyakos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t	i;
 
 	i = 0;
-	while (i < size - 1 && src[i])
+	while (i + 1 < size && src[i])
 	{
 		dst[i] = src[i];
 		++i;
