@@ -1,0 +1,12 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "build debug",
+			"type": "shell",
+			"command": "make -C ${workspaceFolder} clean && make -C ${workspaceFolder} CFLAGS='-Wall -Wextra -Werror -g' && make -C ${workspaceFolder}/test",
+			"group": { "kind": "build", "isDefault": true },
+			"problemMatcher": ["$gcc"]
+		}
+	]
+}
