@@ -6,11 +6,11 @@
 /*   By: ymiyakos <ymiyakos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/10 10:30:53 by ymiyakos          #+#    #+#             */
-/*   Updated: 2026/10/10 11:54:53 by ymiyakos         ###   ########.fr       */
+/*   Updated: 2026/10/11 11:34:33 by ymiyakos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

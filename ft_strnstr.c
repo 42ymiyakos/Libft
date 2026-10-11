@@ -6,13 +6,11 @@
 /*   By: ymiyakos <ymiyakos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/10 19:41:30 by ymiyakos          #+#    #+#             */
-/*   Updated: 2026/10/10 19:58:29 by ymiyakos         ###   ########.fr       */
+/*   Updated: 2026/10/11 11:33:27 by ymiyakos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-size_t	ft_strlen(const char *s);
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

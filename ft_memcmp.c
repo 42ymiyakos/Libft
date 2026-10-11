@@ -6,11 +6,11 @@
 /*   By: ymiyakos <ymiyakos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/10 19:32:42 by ymiyakos          #+#    #+#             */
-/*   Updated: 2026/10/10 19:39:47 by ymiyakos         ###   ########.fr       */
+/*   Updated: 2026/10/11 11:34:49 by ymiyakos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

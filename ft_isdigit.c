@@ -6,9 +6,11 @@
 /*   By: ymiyakos <ymiyakos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 15:22:52 by ymiyakos          #+#    #+#             */
-/*   Updated: 2026/10/08 15:40:03 by ymiyakos         ###   ########.fr       */
+/*   Updated: 2026/10/11 11:37:44 by ymiyakos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {

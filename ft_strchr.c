@@ -6,11 +6,11 @@
 /*   By: ymiyakos <ymiyakos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/10 17:05:49 by ymiyakos          #+#    #+#             */
-/*   Updated: 2026/10/10 18:13:36 by ymiyakos         ###   ########.fr       */
+/*   Updated: 2026/10/11 11:34:17 by ymiyakos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {

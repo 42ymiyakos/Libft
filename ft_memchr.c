@@ -6,11 +6,11 @@
 /*   By: ymiyakos <ymiyakos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/10 19:15:10 by ymiyakos          #+#    #+#             */
-/*   Updated: 2026/10/10 19:30:28 by ymiyakos         ###   ########.fr       */
+/*   Updated: 2026/10/11 11:37:59 by ymiyakos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
