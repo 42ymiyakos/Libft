@@ -6,7 +6,7 @@
 /*   By: ymiyakos <ymiyakos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/11 09:19:03 by ymiyakos          #+#    #+#             */
-/*   Updated: 2026/10/11 11:52:51 by ymiyakos         ###   ########.fr       */
+/*   Updated: 2026/10/11 20:41:36 by ymiyakos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,15 @@
 static	int	ft_isspace(int c)
 {
 	return (c == ' ' || c == '\f' || c == '\n'
-		|| c == '\r' || c == '\r' || c == '\v');
+		|| c == '\r' || c == '\t' || c == '\v');
 }
 
 int	ft_atoi(const char *nptr)
 {
-	int	result;	
-	int	sign;
+	long	result;
+	int		sign;
 
+	result = 0;
 	sign = 1;
 	while (ft_isspace(*nptr))
 		++nptr;
@@ -32,7 +33,7 @@ int	ft_atoi(const char *nptr)
 			sign *= -1;
 		++nptr;
 	}
-	while (0 <= *nptr && *nptr <= 9)
+	while ('0' <= *nptr && *nptr <= '9')
 	{
 		result = result * 10 + *nptr - '0';
 		++nptr;
