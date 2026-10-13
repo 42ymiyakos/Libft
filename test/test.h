@@ -14,6 +14,7 @@
 // utils.c
 void	print_pos(const char *s, const char *p);
 void	print_buf(const char *buf);
+void	print_bytes(const char *s, size_t n);
 int		sign(int x);
 
 int		test_ft_strlen(void);
@@ -28,5 +29,11 @@ int		test_ft_strnstr(void);
 int		test_ft_atoi(void);
 int		test_ft_calloc(void);
 int		test_ft_strdup(void);
+int		test_ft_memset(void);
+int		test_ft_bzero(void);
+int		test_ft_memcpy(void);
+int		test_ft_memmove(void);
+int		test_ft_memchr(void);
+int		test_ft_memcmp(void);
 
 #endif

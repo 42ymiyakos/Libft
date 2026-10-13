@@ -16,5 +16,11 @@ int	main(void)
 	fail += test_ft_atoi();
 	fail += test_ft_calloc();
 	fail += test_ft_strdup();
+	fail += test_ft_memset();
+	fail += test_ft_bzero();
+	fail += test_ft_memcpy();
+	fail += test_ft_memmove();
+	fail += test_ft_memchr();
+	fail += test_ft_memcmp();
 	return (fail != 0);
 }
