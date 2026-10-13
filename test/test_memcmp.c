@@ -23,6 +23,7 @@ int	test_ft_memcmp(void)
 {
 	int	fail = 0;
 
+	fail += check_memcmp("abc", "xyz", 0);
 	fail += check_memcmp("abc", "abc", 3);
 	fail += check_memcmp("abc", "abd", 3);
 	fail += check_memcmp("abd", "abc", 3);

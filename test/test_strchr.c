@@ -25,6 +25,8 @@ int	test_ft_strchr(void)
 	fail += check_strchr("hello", 'z');
 	fail += check_strchr("hello", '\0');
 	fail += check_strchr("hello", 'l' + 256);
+	fail += check_strchr("hello", -1);
+	fail += check_strchr("hello", 0x80);
 	fail += check_strchr("", 'a');
 	fail += check_strchr("", '\0');
 	return (fail);
