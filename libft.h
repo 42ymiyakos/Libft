@@ -6,7 +6,7 @@
 /*   By: ymiyakos <ymiyakos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 14:55:00 by ymiyakos          #+#    #+#             */
-/*   Updated: 2026/10/15 11:18:08 by ymiyakos         ###   ########.fr       */
+/*   Updated: 2026/10/15 11:26:29 by ymiyakos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 # define LIBFT_H
 
 # include <stddef.h>
+
+typedef struct	s_list
+{
+	void *content;
+	struct s_list *next;
+} t_list;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
