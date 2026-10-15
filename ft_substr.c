@@ -6,11 +6,12 @@
 /*   By: ymiyakos <ymiyakos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 13:40:20 by ymiyakos          #+#    #+#             */
-/*   Updated: 2026/10/15 11:08:42 by ymiyakos         ###   ########.fr       */
+/*   Updated: 2026/10/15 14:59:24 by ymiyakos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static size_t	get_copy_len(char const *s, unsigned int start, size_t len)
 {

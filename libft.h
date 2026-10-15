@@ -6,7 +6,7 @@
 /*   By: ymiyakos <ymiyakos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 14:55:00 by ymiyakos          #+#    #+#             */
-/*   Updated: 2026/10/15 11:38:24 by ymiyakos         ###   ########.fr       */
+/*   Updated: 2026/10/15 13:42:25 by ymiyakos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 
 # include <stddef.h>
 
-typedef struct	s_list
+typedef struct s_list
 {
-	void *content;
-	struct s_list *next;
-} t_list;
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
