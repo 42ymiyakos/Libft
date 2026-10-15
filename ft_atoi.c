@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ymiyakos <ymiyakos@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: miyakoshi <miyakoshi@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/11 09:19:03 by ymiyakos          #+#    #+#             */
-/*   Updated: 2026/10/11 20:41:36 by ymiyakos         ###   ########.fr       */
+/*   Updated: 2026/10/14 09:00:24 by miyakoshi        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_atoi(const char *nptr)
 	if (*nptr == '-' || *nptr == '+')
 	{
 		if (*nptr == '-')
-			sign *= -1;
+			sign = -1;
 		++nptr;
 	}
 	while ('0' <= *nptr && *nptr <= '9')
