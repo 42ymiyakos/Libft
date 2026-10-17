@@ -6,7 +6,7 @@
 /*   By: ymiyakos <ymiyakos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/11 09:49:33 by ymiyakos          #+#    #+#             */
-/*   Updated: 2026/10/11 13:27:40 by ymiyakos         ###   ########.fr       */
+/*   Updated: 2026/10/15 17:31:56 by ymiyakos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 	if (size && nmemb > SIZE_MAX / size)
 		return (NULL);
-	p = malloc(nmemb * size);
+	p = malloc((nmemb * size) * sizeof(*p));
 	if (p == NULL)
 		return (NULL);
 	ft_bzero(p, nmemb * size);

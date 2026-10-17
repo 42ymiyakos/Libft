@@ -6,7 +6,7 @@
 /*   By: ymiyakos <ymiyakos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 11:37:36 by ymiyakos          #+#    #+#             */
-/*   Updated: 2026/10/15 16:34:20 by ymiyakos         ###   ########.fr       */
+/*   Updated: 2026/10/15 17:00:51 by ymiyakos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ static size_t	count_head(char const *s1, char const *set)
 {
 	size_t	count;
 
+	if (set == NULL)
+		return (0);
 	count = 0;
 	while (is_trim(s1[count], set))
 		++count;
@@ -39,7 +41,7 @@ static size_t	count_tail(char const *s1, char const *set,
 {
 	size_t	count;
 
-	if (s1_len == trim_head)
+	if (s1_len == trim_head || set == NULL)
 		return (0);
 	count = 0;
 	while (is_trim(s1[s1_len - 1 - count], set))
