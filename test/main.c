@@ -28,5 +28,6 @@ int	main(void)
 	fail += test_ft_substr();
 	fail += test_ft_strjoin();
 	fail += test_ft_strtrim();
+	fail += test_ft_split();
 	return (fail != 0);
 }
