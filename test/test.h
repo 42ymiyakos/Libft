@@ -40,5 +40,9 @@ int		test_ft_memchr(void);
 int		test_ft_memcmp(void);
 int		test_ft_put(void);
 int		test_ft_iter(void);
+int		test_ft_itoa(void);
+int		test_ft_substr(void);
+int		test_ft_strjoin(void);
+int		test_ft_strtrim(void);
 
 #endif

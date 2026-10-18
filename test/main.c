@@ -24,5 +24,9 @@ int	main(void)
 	fail += test_ft_memcmp();
 	fail += test_ft_put();
 	fail += test_ft_iter();
+	fail += test_ft_itoa();
+	fail += test_ft_substr();
+	fail += test_ft_strjoin();
+	fail += test_ft_strtrim();
 	return (fail != 0);
 }
