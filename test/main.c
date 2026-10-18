@@ -22,5 +22,7 @@ int	main(void)
 	fail += test_ft_memmove();
 	fail += test_ft_memchr();
 	fail += test_ft_memcmp();
+	fail += test_ft_put();
+	fail += test_ft_iter();
 	return (fail != 0);
 }
