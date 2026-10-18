@@ -6,7 +6,7 @@
 /*   By: ymiyakos <ymiyakos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 13:40:20 by ymiyakos          #+#    #+#             */
-/*   Updated: 2026/10/18 10:36:54 by ymiyakos         ###   ########.fr       */
+/*   Updated: 2026/10/18 14:27:46 by ymiyakos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@ static size_t	count_copy_len(char const *s, unsigned int start, size_t len)
 	rest_len = s_len - start;
 	if (rest_len < len)
 		return (rest_len);
-	else
-		return (len);
+	return (len);
 }
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
@@ -39,8 +38,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr = malloc((copy_len + 1) * sizeof(*substr));
 	if (substr == NULL)
 		return (NULL);
-	if (copy_len != 0)
-		ft_memcpy(substr, s + start, copy_len);
+	ft_memcpy(substr, s + start, copy_len);
 	substr[copy_len] = '\0';
 	return (substr);
 }

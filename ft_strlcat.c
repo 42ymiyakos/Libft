@@ -6,7 +6,7 @@
 /*   By: ymiyakos <ymiyakos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/10 14:29:26 by ymiyakos          #+#    #+#             */
-/*   Updated: 2026/10/15 11:17:36 by ymiyakos         ###   ########.fr       */
+/*   Updated: 2026/10/18 14:24:31 by ymiyakos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		dst[dest_len + i] = src[i];
 		++i;
 	}
-	if (size)
-		dst[dest_len + i] = '\0';
+	dst[dest_len + i] = '\0';
 	return (dest_len + src_len);
 }

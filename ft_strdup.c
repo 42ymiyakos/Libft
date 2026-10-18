@@ -6,7 +6,7 @@
 /*   By: ymiyakos <ymiyakos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/11 11:16:39 by ymiyakos          #+#    #+#             */
-/*   Updated: 2026/10/15 17:47:31 by ymiyakos         ###   ########.fr       */
+/*   Updated: 2026/10/18 14:58:50 by ymiyakos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,13 @@
 char	*ft_strdup(const char *s)
 {
 	char	*p;
-	int		i;
+	size_t	s_len;
 
-	p = malloc((ft_strlen(s) + 1) * sizeof(*p));
+	s_len = ft_strlen(s);
+	p = malloc((s_len + 1) * sizeof(*p));
 	if (p == NULL)
 		return (NULL);
-	i = 0;
-	while (s[i])
-	{
-		p[i] = s[i];
-		++i;
-	}
-	p[i] = '\0';
+	ft_memcpy(p, s, s_len);
+	p[s_len] = '\0';
 	return (p);
 }

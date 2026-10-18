@@ -6,21 +6,17 @@
 /*   By: ymiyakos <ymiyakos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 16:13:21 by ymiyakos          #+#    #+#             */
-/*   Updated: 2026/10/17 16:44:36 by ymiyakos         ###   ########.fr       */
+/*   Updated: 2026/10/18 15:30:05 by ymiyakos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
-static void	recursion(long n, int fd)
+static void	put_unsigned_nbr(long n, int fd)
 {
-	char	c;
-
 	if (n >= 10)
-		recursion(n / 10, fd);
-	c = '0' + n % 10;
-	write(fd, &c, 1);
+		put_unsigned_nbr(n / 10, fd);
+	ft_putchar_fd(n % 10 + '0', fd);
 }
 
 void	ft_putnbr_fd(int n, int fd)
@@ -30,8 +26,8 @@ void	ft_putnbr_fd(int n, int fd)
 	long_n = n;
 	if (n < 0)
 	{
-		write(fd, "-", 1);
+		ft_putchar_fd('-', fd);
 		long_n *= -1;
 	}
-	recursion(long_n, fd);
+	put_unsigned_nbr(long_n, fd);
 }
