@@ -6,7 +6,7 @@
 /*   By: ymiyakos <ymiyakos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 16:38:00 by ymiyakos          #+#    #+#             */
-/*   Updated: 2026/10/17 12:02:27 by ymiyakos         ###   ########.fr       */
+/*   Updated: 2026/10/18 10:47:18 by ymiyakos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ static int	fill_words(char const *s, char c, char **ss)
 			s += word_len;
 		}
 	}
+	ss[i] = NULL;
 	return (1);
 }
 
@@ -82,7 +83,7 @@ char	**ft_split(char const *s, char c)
 
 	if (s == NULL)
 		return (NULL);
-	ss = ft_calloc((count_words(s, c) + 1), sizeof(*ss));
+	ss = malloc((count_words(s, c) + 1) * sizeof(*ss));
 	if (ss == NULL)
 		return (NULL);
 	if (!fill_words(s, c, ss))
