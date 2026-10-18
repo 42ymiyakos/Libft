@@ -6,7 +6,7 @@
 /*   By: ymiyakos <ymiyakos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 19:12:03 by ymiyakos          #+#    #+#             */
-/*   Updated: 2026/10/17 19:52:44 by ymiyakos         ###   ########.fr       */
+/*   Updated: 2026/10/18 09:19:01 by ymiyakos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	if (s == NULL || f == NULL)
 		return (NULL);
-	applied = malloc(ft_strlen(s) * sizeof(*applied) + 1);
+	applied = malloc((ft_strlen(s) + 1) * sizeof(*applied));
 	if (applied == NULL)
 		return (NULL);
 	i = 0;

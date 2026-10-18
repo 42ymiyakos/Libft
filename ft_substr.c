@@ -6,7 +6,7 @@
 /*   By: ymiyakos <ymiyakos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 13:40:20 by ymiyakos          #+#    #+#             */
-/*   Updated: 2026/10/15 14:59:24 by ymiyakos         ###   ########.fr       */
+/*   Updated: 2026/10/18 09:19:18 by ymiyakos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (s == NULL)
 		return (NULL);
 	copy_len = get_copy_len(s, start, len);
-	substr = malloc(copy_len * sizeof(*substr) + 1);
+	substr = malloc((copy_len + 1) * sizeof(*substr));
 	if (substr == NULL)
 		return (NULL);
 	if (copy_len != 0)

@@ -6,7 +6,7 @@
 /*   By: ymiyakos <ymiyakos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 16:51:59 by ymiyakos          #+#    #+#             */
-/*   Updated: 2026/10/17 19:07:13 by ymiyakos         ###   ########.fr       */
+/*   Updated: 2026/10/18 09:18:22 by ymiyakos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	*ft_itoa(int n)
 	int		i;
 
 	int_len = count_int_len(n);
-	a = malloc(int_len * sizeof(*a) + 1);
+	a = malloc((int_len + 1) * sizeof(*a));
 	if (a == NULL)
 		return (NULL);
 	long_n = n;
