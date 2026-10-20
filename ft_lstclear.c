@@ -6,7 +6,7 @@
 /*   By: ymiyakos <ymiyakos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/18 19:39:49 by ymiyakos          #+#    #+#             */
-/*   Updated: 2026/10/18 19:44:19 by ymiyakos         ###   ########.fr       */
+/*   Updated: 2026/10/20 10:46:39 by ymiyakos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,14 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	t_list	*head;
+	t_list	*next_node;
 
-	head = *lst
+	if (lst == NULL)
+		return ;
+	while (*lst)
+	{
+		next_node = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = next_node;
+	}
 }
