@@ -6,7 +6,7 @@ SRCS	= main.c utils.c test_strlen.c test_is.c test_to.c test_strchr.c \
 		  test_memset.c test_bzero.c test_memcpy.c test_memmove.c \
 		  test_memchr.c test_memcmp.c test_put.c test_iter.c \
 		  test_itoa.c test_substr.c test_strjoin.c test_strtrim.c \
-		  test_split.c
+		  test_split.c test_lst.c
 CC		= cc
 CFLAGS	= -Wall -Wextra -g -fsanitize=address
 INCS	= -I. -I..
