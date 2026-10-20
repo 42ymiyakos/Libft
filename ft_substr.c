@@ -6,7 +6,7 @@
 /*   By: ymiyakos <ymiyakos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 13:40:20 by ymiyakos          #+#    #+#             */
-/*   Updated: 2026/10/18 14:27:46 by ymiyakos         ###   ########.fr       */
+/*   Updated: 2026/10/20 13:55:00 by ymiyakos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr = malloc((copy_len + 1) * sizeof(*substr));
 	if (substr == NULL)
 		return (NULL);
-	ft_memcpy(substr, s + start, copy_len);
+	if (copy_len > 0)
+		ft_memcpy(substr, s + start, copy_len);
 	substr[copy_len] = '\0';
 	return (substr);
 }

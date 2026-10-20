@@ -6,7 +6,7 @@
 /*   By: ymiyakos <ymiyakos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/11 09:19:03 by ymiyakos          #+#    #+#             */
-/*   Updated: 2026/10/15 17:15:01 by ymiyakos         ###   ########.fr       */
+/*   Updated: 2026/10/20 14:20:27 by ymiyakos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ static int	is_space(int c)
 
 int	ft_atoi(const char *nptr)
 {
-	long	result;
-	int		sign;
+	long long	result;
+	int			sign;
 
 	result = 0;
 	sign = 1;

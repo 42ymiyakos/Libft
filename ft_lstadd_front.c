@@ -6,7 +6,7 @@
 /*   By: ymiyakos <ymiyakos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/18 17:32:03 by ymiyakos          #+#    #+#             */
-/*   Updated: 2026/10/18 19:04:20 by ymiyakos         ###   ########.fr       */
+/*   Updated: 2026/10/20 12:55:31 by ymiyakos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (lst == NULL)
+	if (lst == NULL || new == NULL)
 		return ;
 	new->next = *lst;
 	*lst = new;
