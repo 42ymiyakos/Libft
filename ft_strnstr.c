@@ -6,7 +6,7 @@
 /*   By: ymiyakos <ymiyakos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/10 19:41:30 by ymiyakos          #+#    #+#             */
-/*   Updated: 2026/10/15 11:17:50 by ymiyakos         ###   ########.fr       */
+/*   Updated: 2026/10/20 15:13:17 by ymiyakos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	little_len = ft_strlen(little);
 	if (little_len == 0)
 		return ((char *)big);
-	if (little_len > len)
-		return (NULL);
 	i = 0;
 	while (i < len && big[i])
 	{
