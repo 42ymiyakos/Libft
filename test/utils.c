@@ -93,3 +93,39 @@ ssize_t	read_capture(int fds[2], char *buf, size_t size)
 	close(fds[0]);
 	return (total);
 }
+
+// strmapi / striteri用: fが何番目に何の文字で呼ばれたかを記録する
+// 1回の呼び出しごとに、iを数字1文字にしたものと受け取った文字を追加する
+// iを1文字で表すので、入力は9文字までにする
+void	call_log_reset(t_call_log *log)
+{
+	log->len = 0;
+}
+
+void	call_log_record(t_call_log *log, unsigned int i, char c)
+{
+	if (log->len + 2 > CALL_LOG_SIZE)
+		return ;
+	log->v[log->len++] = '0' + i;
+	log->v[log->len++] = c;
+}
+
+// 記録されたfの呼ばれ方を期待値と比べる
+// 記録には入力の文字しか入らない(途中に'\0'がない)ので、期待値の長さはstrlenで取れる
+int	check_call_log(const char *name, const char *input, const t_call_log *log,
+		const char *expected)
+{
+	size_t	len;
+
+	len = strlen(expected);
+	if (log->len == len && memcmp(log->v, expected, len) == 0)
+		return (0);
+	printf("%s: input: ", name);
+	print_bytes(input, strlen(input));
+	printf(", expected calls: ");
+	print_bytes(expected, len);
+	printf(", actual calls: ");
+	print_bytes(log->v, log->len);
+	printf("\n");
+	return (1);
+}

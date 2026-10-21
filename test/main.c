@@ -23,12 +23,21 @@ int	main(void)
 	fail += test_ft_memchr();
 	fail += test_ft_memcmp();
 	fail += test_ft_put();
-	fail += test_ft_iter();
+	fail += test_ft_strmapi();
+	fail += test_ft_striteri();
 	fail += test_ft_itoa();
 	fail += test_ft_substr();
 	fail += test_ft_strjoin();
 	fail += test_ft_strtrim();
 	fail += test_ft_split();
-	fail += test_ft_lst();
+	fail += test_ft_lstnew();
+	fail += test_ft_lstadd_front();
+	fail += test_ft_lstsize();
+	fail += test_ft_lstlast();
+	fail += test_ft_lstadd_back();
+	fail += test_ft_lstdelone();
+	fail += test_ft_lstclear();
+	fail += test_ft_lstiter();
+	fail += test_ft_lstmap();
 	return (fail != 0);
 }
