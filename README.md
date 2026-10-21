@@ -72,9 +72,47 @@
 
 ### Compilation
 
+リポジトリのルートで `make` を実行すると、静的ライブラリ `libft.a` が作られる。
+
+```sh
+make          # libft.a を作成
+make clean    # オブジェクトファイル(*.o)を削除
+make fclean   # オブジェクトファイルと libft.a を削除
+make re       # fclean してから再ビルド
+```
+
+コンパイラは `cc`、フラグは `-Wall -Wextra -Werror`。
+
 ### Installation
 
+自分のプログラムで使うときは、`libft.h` を include して `libft.a` をリンクする。
+
+```c
+#include "libft.h"
+
+int	main(void)
+{
+	ft_putendl_fd("Hello, libft!", 1);
+	return (0);
+}
+```
+
+```sh
+cc -Wall -Wextra -Werror -I<path/to/libft> main.c -L<path/to/libft> -lft -o a.out
+```
+
 ### Execution
+
+```sh
+./a.out
+```
+
+テストは `test/` ディレクトリで実行する(AddressSanitizer と `libbsd` を使用するため、Linux 環境を想定)。
+
+```sh
+cd test
+make run
+```
 
 ## Resources
 
