@@ -1,5 +1,6 @@
 #include "test.h"
 
+// 1ケース分を本物のatoiと比べて、失敗なら1を返す
 static int	check_atoi(const char *s)
 {
 	int	expected = atoi(s);

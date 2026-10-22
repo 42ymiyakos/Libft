@@ -1,5 +1,6 @@
 #include "test.h"
 
+// 1ケース分を比べて、失敗なら1を返す
 static int	check_strlen(const char *s)
 {
 	size_t	expected = strlen(s);

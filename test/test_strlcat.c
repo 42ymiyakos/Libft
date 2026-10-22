@@ -1,6 +1,7 @@
 #include "test.h"
 
 // dstの初期値をdst_initで与える
+// 書き込んではいけない範囲を壊していないか見るため、バッファ全体と戻り値を比べる
 static int	check_strlcat(const char *dst_init, const char *src, size_t size)
 {
 	char	expected_buf[BUF_SIZE];

@@ -1,5 +1,6 @@
 #include "test.h"
 
+// 1ケース分を比べて、失敗なら1を返す(戻り値は位置で表示する)
 static int	check_strrchr(const char *s, int c)
 {
 	char	*expected = strrchr(s, c);

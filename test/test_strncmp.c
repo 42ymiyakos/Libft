@@ -1,5 +1,6 @@
 #include "test.h"
 
+// 戻り値は符号だけが決まっているので、符号だけを比べる
 static int	check_strncmp(const char *s1, const char *s2, size_t n)
 {
 	int	expected = strncmp(s1, s2, n);

@@ -1,5 +1,6 @@
 #include "test.h"
 
+// 1ケース分を比べて、失敗なら1を返す(戻り値は位置で表示する)
 static int	check_strnstr(const char *big, const char *little, size_t len)
 {
 	char	*expected = strnstr(big, little, len);
@@ -36,6 +37,7 @@ static int	check_strnstr_unterminated(const char *little)
 	return (1);
 }
 
+// littleがバッファの終端付近にある/終端からはみ出すケースを試す
 static int	test_ft_strnstr_unterminated(void)
 {
 	int	fail = 0;

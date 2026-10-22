@@ -2,6 +2,7 @@
 
 // lst系のテストで共通に使う補助関数
 
+// f / delが受け取ったcontentの記録(LOG_SIZEを超えた分は捨てる)
 void	log_reset(t_log *log)
 {
 	log->len = 0;

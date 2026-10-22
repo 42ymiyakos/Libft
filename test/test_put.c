@@ -23,6 +23,8 @@ static int	compare_output(const char *name, const char *input,
 	return (1);
 }
 
+// pipeに書かせて、書き込まれたバイト列を取り出して期待値と比べる
+// (以下check_putstr / putendl / putnbrも同じ流れ)
 static int	check_putchar(char c, const char *expected, size_t expected_len)
 {
 	int		fds[2];
@@ -39,6 +41,7 @@ static int	check_putchar(char c, const char *expected, size_t expected_len)
 			expected, expected_len, buf, len));
 }
 
+// s == NULLのときは何も書かない(自前の仕様)
 static int	check_putstr(char *s, const char *expected)
 {
 	int		fds[2];
@@ -53,6 +56,7 @@ static int	check_putstr(char *s, const char *expected)
 			expected, strlen(expected), buf, len));
 }
 
+// s == NULLのときは改行も含めて何も書かない(自前の仕様)
 static int	check_putendl(char *s, const char *expected)
 {
 	int		fds[2];
@@ -67,6 +71,7 @@ static int	check_putendl(char *s, const char *expected)
 			expected, strlen(expected), buf, len));
 }
 
+// 失敗時に分かりやすいよう、入力のnは文字列にして表示する
 static int	check_putnbr(int n, const char *expected)
 {
 	int		fds[2];
