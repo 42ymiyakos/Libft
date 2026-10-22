@@ -23,7 +23,8 @@ static int	compare_output(const char *name, const char *input,
 	return (1);
 }
 
-// pipeに書かせて、書き込まれたバイト列を取り出して期待値と比べる
+// open_capture → ft_putchar_fdに書かせる → read_captureで取り出す
+// → compare_outputで期待値と比べる、という流れ
 // (以下check_putstr / putendl / putnbrも同じ流れ)
 static int	check_putchar(char c, const char *expected, size_t expected_len)
 {
@@ -36,6 +37,7 @@ static int	check_putchar(char c, const char *expected, size_t expected_len)
 		return (1);
 	ft_putchar_fd(c, fds[1]);
 	len = read_capture(fds, buf, sizeof(buf));
+	// 失敗時の表示用: cは見えない文字のこともあるので"\xNN"の形にする
 	snprintf(input, sizeof(input), "\\x%02x", (unsigned char)c);
 	return (compare_output("ft_putchar_fd", input,
 			expected, expected_len, buf, len));
@@ -83,6 +85,7 @@ static int	check_putnbr(int n, const char *expected)
 		return (1);
 	ft_putnbr_fd(n, fds[1]);
 	len = read_capture(fds, buf, sizeof(buf));
+	// 失敗時の表示用: nを文字列にして、compare_outputに入力として渡す
 	snprintf(input, sizeof(input), "%d", n);
 	return (compare_output("ft_putnbr_fd", input,
 			expected, strlen(expected), buf, len));

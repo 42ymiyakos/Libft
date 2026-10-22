@@ -57,7 +57,8 @@ void	print_bytes(const char *s, size_t n)
 }
 
 // put系のテスト用: 書き込み先にするpipeを作る
-// fds[1]をft_put*_fdに渡し、書き終わったらread_captureで中身を取り出す
+// ft_put*_fdは戻り値がないので、書かれた内容をpipe経由で読み戻して確かめる
+// fds[1](書き込み口)をft_put*_fdに渡し、書き終わったらread_captureで中身を取り出す
 int	open_capture(int fds[2])
 {
 	if (pipe(fds) == -1)
@@ -69,6 +70,8 @@ int	open_capture(int fds[2])
 }
 
 // 書き込み側を閉じてからEOFまで読み、読んだバイト数を返す(エラー時は-1)
+// 書き込み側を先に閉じないと、readがデータを待ち続けてEOF(0)が返らず固まる
+// readは要求より少なく返すことがあるので、EOFかsizeに達するまでループする
 // 両方のfdはここで閉じる。pipeの容量を超える量を書くと詰まるので小さい出力専用
 ssize_t	read_capture(int fds[2], char *buf, size_t size)
 {

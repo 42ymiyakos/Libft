@@ -41,6 +41,7 @@ static int	check_digit_boundaries(void)
 			n = p + d;
 			if (n <= INT_MAX)
 			{
+				// 期待値の文字列をsnprintfで作る(ft_itoaに頼らないため)
 				snprintf(expected, sizeof(expected), "%ld", n);
 				fail += check_itoa((int)n, expected);
 				snprintf(expected, sizeof(expected), "%ld", -n);
