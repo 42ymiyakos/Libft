@@ -40,5 +40,7 @@ int	test_ft_lstadd_back(void)
 	new = build_list(vals, 1);
 	ft_lstadd_back(NULL, new);
 	free_nodes(new);
+	// lst == NULLかつnew == NULL: クラッシュしない
+	ft_lstadd_back(NULL, NULL);
 	return (fail);
 }

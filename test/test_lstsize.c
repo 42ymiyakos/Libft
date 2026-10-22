@@ -31,5 +31,12 @@ int	test_ft_lstsize(void)
 		free_nodes(lst);
 		++i;
 	}
+	// lst == NULL: 0を返す
+	actual = ft_lstsize(NULL);
+	if (actual != 0)
+	{
+		printf("ft_lstsize: lst=NULL, expected: 0, ft_lstsize: %u\n", actual);
+		fail = 1;
+	}
 	return (fail);
 }

@@ -31,7 +31,20 @@ int	test_ft_lstadd_front(void)
 	ft_lstadd_front(&head, new);
 	fail += check_list("ft_lstadd_front", "added 1, 2, 3 in this order", head,
 			(int []){3, 2, 1}, 3);
+	// new == NULL: リストは変わらない
+	ft_lstadd_front(&head, NULL);
+	fail += check_list("ft_lstadd_front", "new=NULL", head,
+			(int []){3, 2, 1}, 3);
 	free_nodes(head);
+	// 空のリストにnew == NULL: 空のまま
+	head = NULL;
+	ft_lstadd_front(&head, NULL);
+	if (head != NULL)
+	{
+		printf("ft_lstadd_front: empty list and new=NULL, head should stay "
+			"NULL\n");
+		fail = 1;
+	}
 	// lst == NULL: クラッシュしない
 	new = build_list(vals, 1);
 	ft_lstadd_front(NULL, new);
@@ -41,5 +54,7 @@ int	test_ft_lstadd_front(void)
 		fail = 1;
 	}
 	free_nodes(new);
+	// lst == NULLかつnew == NULL: クラッシュしない
+	ft_lstadd_front(NULL, NULL);
 	return (fail);
 }
